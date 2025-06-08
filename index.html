@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRE INFO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💚 CRE INFO 💚</h1>
+        
+        <div class="add-gecko-form">
+            <h2>새 개체 추가</h2>
+            <form id="geckoForm">
+                <div class="form-group">
+                    <label for="name">🦎 이름:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hatchDate">🥚 해칭일:</label>
+                    <input type="date" id="hatchDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">📸 사진:</label>
+                    <input type="file" id="photo" accept="image/*" required>
+                    <div id="photoPreview" class="preview"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="weight">⚖️ 현재 무게 (g):</label>
+                    <input type="number" id="weight" step="0.1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="parentPhoto">👨‍👩‍👧‍👦 부모 사진:</label>
+                    <input type="file" id="parentPhoto" accept="image/*">
+                    <div id="parentPhotoPreview" class="preview"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="parentInfo">📝 부모 정보:</label>
+                    <textarea id="parentInfo" rows="3"></textarea>
+                </div>
+                
+                <button type="submit">➕ 개체 추가</button>
+            </form>
+        </div>
+        
+        <div class="gecko-list">
+            <h2>📋 등록된 개체 목록</h2>
+            <div id="geckoList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
